@@ -22,6 +22,12 @@
                 <small class="classy">vos CSS sous vitamines !</small>
             </h1>
             
+            <small>
+                <br>
+                Thomas ZILLIOX
+                 - <a href="http://twitter.com/iamtzi">@iamtzi</a>
+                 - <a href="http://tzi.fr">http://tzi.fr/</a>.
+            </small>
         </div>
     </section>
 
@@ -35,7 +41,7 @@
                 <ol>
                     <li class="current">BEM améliore votre HTML</li>
                     <li>BEM améliore vos CSS</li>
-                    <li>Essayez-le dès lundi</li>
+                    <li>Essayez BEM dès lundi</li>
                     <li>Les petites astuces</li>
                 </ol>
             </div>
@@ -45,7 +51,7 @@
     <section>
         <div class="slide slide--text">
             <h2>
-                BEM améliore votre HTML
+                1. BEM améliore votre HTML
             </h2>
             <div class="slide-content">
                 <p>&Agrave; la recherche de <span class="current">classes autonomes</span>.</p>
@@ -67,7 +73,7 @@
     <section>
         <div class="slide slide--text">
             <h2>
-                BEM améliore votre HTML
+                1. BEM améliore votre HTML
             </h2>
             <div class="slide-content">
                 <p>&Agrave; la recherche de classes autonomes <span class="current">et explicites</span>.</p>
@@ -115,13 +121,13 @@
     <section>
         <div class="slide slide--text">
             <h2>
-                BEM améliore votre HTML
+                1. BEM améliore votre HTML
             </h2>
             <div class="slide-content">
                 <img src="images/BEM__illustration--definition.png" class="right" />
                 <p>BEM est <span class="current">une convention de nommage</span>.</p>
                 <ul>
-                    <li>B -> Block (~ component ou module)</li>
+                    <li>B -> Block (= component ou module)</li>
                     <li>E -> Element</li>
                     <li>M -> Modifier</li>
                 </ul>
@@ -136,7 +142,7 @@
     <section>
         <div class="slide slide--text">
             <h2>
-                BEM améliore votre HTML
+                1. BEM améliore votre HTML
             </h2>
             <div class="slide-content">
                 <p>&Agrave; la recherche de classes autonomes et explicites.</p>
@@ -158,7 +164,7 @@
     <section>
         <div class="slide slide--text">
             <h2>
-                BEM améliore votre HTML
+                1. BEM améliore votre HTML
             </h2>
             <div class="slide-content">
                 <p>Quels sont les intérêts ?</p>
@@ -181,7 +187,7 @@
                 <ol>
                     <li>BEM améliore votre HTML</li>
                     <li class="current">BEM améliore vos CSS</li>
-                    <li>Essayez-le dès lundi</li>
+                    <li>Essayez BEM dès lundi</li>
                     <li>Les petites astuces</li>
                 </ol>
             </div>
@@ -191,7 +197,7 @@
     <section>
         <div class="slide slide--text">
             <h2>
-                BEM améliore vos CSS
+                2. BEM améliore vos CSS
             </h2>
             <div class="slide-content">
                 <p>Une règle : les sélecteurs CSS peuvent être composés :</p>
@@ -218,10 +224,10 @@
     <section>
         <div class="slide slide--text">
             <h2>
-                BEM améliore vos CSS
+                2. BEM améliore vos CSS
             </h2>
             <div class="slide-content">
-                <p>Pour éviter les fuites</p>
+                <p>A. Pour éviter les fuites</p>
                 <pre><code class="language-markup">&lt;section class="content-article"&gt;
     &lt;h3 class="title"&gt;My title&lt;/h3&gt;
 
@@ -237,20 +243,20 @@
     <section>
         <div class="slide slide--text">
             <h2>
-                BEM améliore vos CSS
+                2. BEM améliore vos CSS
             </h2>
             <div class="slide-content">
-                <p>Pour être séparé du markup (évolution)</p>
+                <p>B. Pour être séparé du markup (évolution)</p>
                 <pre><code class="language-markup">&lt;section class="content-article"&gt;
-    &lt;h3 class="content-article__title"&gt;My title&lt;/h3&gt;
-&lt;/div&gt;
-&lt;section class="content-article"&gt;
-    &lt;img style="float:left;" /&gt;
     &lt;h3 class="content-article__title"&gt;My title&lt;/h3&gt;
 &lt;/div&gt;</code></pre>
                 <pre><code class="language-css">.content-article__title:first-child {
     margin-top: 0;
 }</code></pre>
+                <pre><code class="language-markup">&lt;section class="content-article"&gt;
+    &lt;img style="float:left;" /&gt;
+    &lt;h3 class="content-article__title"&gt;My title&lt;/h3&gt;
+&lt;/div&gt;</code></pre>
             </div>
         </div>
     </section>
@@ -258,10 +264,10 @@
     <section>
         <div class="slide slide--text">
             <h2>
-                BEM améliore vos CSS
+                2. BEM améliore vos CSS
             </h2>
             <div class="slide-content">
-                <p>Pour être séparé du markup (a11y)</p>
+                <p>C. Pour être séparé du markup (a11y)</p>
                 <pre><code class="language-markup">&lt;button class="button"&gt;
 &lt;a class="button"&gt;
 &lt;input class="button"&gt;</code></pre>
@@ -275,10 +281,10 @@
     <section>
         <div class="slide slide--text">
             <h2>
-                BEM améliore vos CSS
+                2. BEM améliore vos CSS
             </h2>
             <div class="slide-content">
-                <p>Pour être séparé du markup (SEO)</p>
+                <p>D. Pour être séparé du markup (SEO)</p>
                 <pre><code class="language-markup">&lt;h1 class="content-article__title"&gt;
 &lt;h2 class="content-article__title"&gt;
 &lt;div class="content-article__title"&gt;</code></pre>
@@ -292,10 +298,10 @@
     <section>
         <div class="slide slide--text">
             <h2>
-                BEM améliore vos CSS
+                2. BEM améliore vos CSS
             </h2>
             <div class="slide-content">
-                <p>Un poids constant</p>
+                <p>E. Un poids constant, facilement surchargeable.</p>
                 <pre><code class="language-css">/* normalize.css */
 a { background: transparent }
 
@@ -305,6 +311,238 @@ a { background: transparent }
 
 /* theme/button.css */
 .button--important { background: #663399 }</code></pre>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide slide--text">
+            <h2>
+                Sommaire
+            </h2>
+            <div class="slide-content">
+                <ol>
+                    <li>BEM améliore votre HTML</li>
+                    <li>BEM améliore vos CSS</li>
+                    <li class="current">Essayez BEM dès lundi</li>
+                    <li>Les petites astuces</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="slide slide--text">
+            <h2>
+                3. Essayez BEM dès lundi
+            </h2>
+            <div class="slide-content">
+                <p>A. <span class="current">S'habituer aux classes précises</span>.</p>
+                <pre><code class="language-markup">&lt;section class="content-article"&gt;
+    &lt;h3 class="title"&gt;My title&lt;/h3&gt;
+    &lt;p&gt;some content&lt;/p&gt;
+
+    &lt;div class="action"&gt;
+        &lt;h4 class="title important"&gt;
+            Action title
+        &lt;/h4&gt;
+        &lt;button class="important"&gt;some button&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/section&gt;</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="slide slide--text">
+            <h2>
+                3. Essayez BEM dès lundi
+            </h2>
+            <div class="slide-content">
+                <p>A. S'habituer aux classes précises. <span class="current">Ce n'est pas sale</span> ;)</p>
+                <pre><code class="language-markup">&lt;section class="content-article"&gt;
+    &lt;h3 class="content-article__title"&gt;My title&lt;/h3&gt;
+    &lt;p&gt;some content&lt;/p&gt;
+
+    &lt;div class="action"&gt;
+        &lt;h4 class="action__title action__title--important"&gt;
+            Action title
+        &lt;/h4&gt;
+        &lt;button class="button button--important"&gt;some button&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/section&gt;</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="slide slide--text">
+            <h2>
+                3. Essayez BEM dès lundi
+            </h2>
+            <div class="slide-content">
+                <p>B. Essayer !</p>
+                <ul>
+                    <li class="current">Essayez avec 1 composant</li>
+                    <li>Pas besoin de migrer tout le existant</li>
+                    <li>Pas besoin d'attendre un nouveau projet</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide slide--text">
+            <h2>
+                Sommaire
+            </h2>
+            <div class="slide-content">
+                <ol>
+                    <li>BEM améliore votre HTML</li>
+                    <li>BEM améliore vos CSS</li>
+                    <li>Essayez BEM dès lundi</li>
+                    <li class="current">Les petites astuces</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="slide slide--text">
+            <h2>
+                4. Les petites astuces
+            </h2>
+            <div class="slide-content">
+                <p>A. BEM peut être sémantique, ou non</p>
+                <pre><code class="language-css">/* CSS ZEN : Classe sémantique fonctionnel */
+.button--submit-contact-form { background: #663399 }
+
+/* Bootstrap : Classe sémantique visuelle */
+.button--primary { background: #663399 }
+
+/* OOCSS : Classe visuelle */
+.button--purple { background: #663399 }</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="slide slide--text">
+            <h2>
+                Les petites astuces
+            </h2>
+            <div class="slide-content">
+                <p>B. BEM peut prendre d'autres formes</p>
+                <pre><code class="language-css">.block-name__element-name--modifier-name { }
+.blockName_elementName-modifierName { }
+.blockName-elementName--modifierName { }
+.org-BlockName-elementName--modifierName { }</code></pre>
+                <p>
+                    BEM peut prendre de nombreuses formes.<br>
+                    Voir <a href="http://blog.kaelig.fr/post/48196348743/fifty-shades-of-bem">"Fifty Shades of BEM"</a> &mdash; @kaelig
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="slide slide--text">
+            <h2>
+                Les petites astuces
+            </h2>
+            <div class="slide-content">
+                <p>C. Vous pouvez utiliser BEM partout</p>
+                <p>Même si ce n'est pas un composant réutilisable.</p>
+                <p class="spotGreen"><i class="icon-heart"></i> Je l'utilise d'ailleurs pour mes noms de fichiers : "Facture__EDF--2014-06.pdf"</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="slide slide--text">
+            <h2>
+                Les petites astuces
+            </h2>
+            <div class="slide-content">
+                <p>D. Il n'y a qu'un seul élément par sélecteur</p>
+                <pre><code class="language-markup">&lt;nav class="menu"&gt;
+    &lt;ul class="menu__tab-list"&gt;
+        &lt;li class="menu__tab"&gt;
+            &lt;a class="menu__tab-link"&gt;
+                &lt;span class="menu__tab-label"&gt;</code></pre>
+                <p class="spotRed"><i class="icon-warning-sign"></i> Pas de "menu__list__tab__link__label"</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="slide slide--text">
+            <h2>
+                Les petites astuces
+            </h2>
+            <div class="slide-content">
+                <p>E. Les blocks peuvent se chevaucher</p>
+                <pre><code class="language-markup">&lt;nav class="menu"&gt;
+    &lt;ul class="menu__list"&gt;
+        &lt;li class="menu__item tab"&gt;
+            &lt;a class="tab__link"&gt;
+                &lt;span class="tab__label"&gt;</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="slide slide--text">
+            <h2>
+                Les petites astuces
+            </h2>
+            <div class="slide-content">
+                <p>F. Avec un préprocesseur</p>
+                <p>La syntaxe suivante est valide avec Sass 3.3 et Less :</p>
+                <pre><code class="language-css">.block {
+    &__element {
+    }
+    &__element--modifier {
+    }
+}</code></pre>
+                <p class="spotGreen"><i class="icon-heart"></i> Avec un fichier par composant, c'est très facile à ranger</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide slide--text">
+            <h2>
+                Conclusion
+            </h2>
+            <div class="slide-content">
+                <ol>
+                    <li>BEM est une convention partagée</li>
+                    <li>BEM améliore la lisibilité de votre HTML</li>
+                    <li>BEM améliore la maintenabilité, la réutilisabilité, la pérennité de vos styles</li>
+                    <li>BEM n'est pas contraignant</li>
+                    <li>BEM est l'ami des préprocesseur</li>
+                    <li>BEM est un premier pas dans le web component</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+
+    <section style="background-image:url(images/BEM__background--kiwi.jpg)">
+        <div class="slide slide--card slide--textShadow">
+            <h3>
+                <span class="spotGreen"><i class="icon-smile"></i> Merci</span>
+            </h3>
+            <p>Retrouvez ces slides sur <a href="http://tzi.fr/talk/KiwiParty2014">http://tzi.fr/talk/KiwiParty2014</a>
+            <p>
+                Thomas ZILLIOX
+                 - <a href="http://twitter.com/iamtzi">@iamtzi</a>
+                 - <a href="http://tzi.fr">http://tzi.fr/</a>.
+            </p>
             </div>
         </div>
     </section>
