@@ -99,6 +99,16 @@ section {
     margin: 0 auto;
     list-style-type: none;
 }
+.slide--text ul {
+    font-size: 1em;
+    list-style: disc inside;
+}
+.slide--text p + ul {
+    margin-top: 0;
+}
+.slide--text img {
+    border: 1px black solid;
+}
 
 section a {
     font-weight: 700;
@@ -130,4 +140,12 @@ section .classyNote {
     color: #FFF;
     background: #111111;
     padding: 1em;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
 }

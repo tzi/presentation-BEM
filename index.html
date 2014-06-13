@@ -35,7 +35,7 @@
                 <ol>
                     <li class="current">BEM améliore votre HTML</li>
                     <li>BEM améliore vos CSS</li>
-                    <li>Commencez !</li>
+                    <li>Essayez-le dès lundi</li>
                     <li>Les petites astuces</li>
                 </ol>
             </div>
@@ -48,7 +48,7 @@
                 BEM améliore votre HTML
             </h2>
             <div class="slide-content">
-                <p>&Agrave; la recherche de classes autonomes</p>
+                <p>&Agrave; la recherche de <span class="current">classes autonomes</span>.</p>
                 <pre><code class="language-markup">&lt;section class="content-article"&gt;
     &lt;h3 class="title"&gt;My title&lt;/h3&gt;
     &lt;p&gt;some content&lt;/p&gt;
@@ -70,7 +70,7 @@
                 BEM améliore votre HTML
             </h2>
             <div class="slide-content">
-                <p>&Agrave; la recherche de classes autonomes et explicites</p>
+                <p>&Agrave; la recherche de classes autonomes <span class="current">et explicites</span>.</p>
                 <pre><code class="language-markup">&lt;section class="content-article"&gt;
     &lt;h3 class="content-article-title"&gt;My title&lt;/h3&gt;
     &lt;p&gt;some content&lt;/p&gt;
@@ -86,13 +86,53 @@
         </div>
     </section>
 
+
+    <section>
+        <div class="slide slide--card">
+            <ul>
+                <li>B -> Block</li>
+                <li>E -> Element</li>
+                <li>M -> Modifier</li>
+            </ul>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide slide--card">
+            <p>block-name [ __element-name ] [ --modifier-name ]</p>
+        </div>
+    </section>
+
+
     <section>
         <div class="slide slide--text">
             <h2>
                 BEM améliore votre HTML
             </h2>
             <div class="slide-content">
-                <p>&Agrave; la recherche d'un standard de nommage</p>
+                <img src="images/BEM__illustration--definition.png" class="right" />
+                <p>BEM est <span class="current">une convention de nommage</span>.</p>
+                <ul>
+                    <li>B : Block (~ component ou module)</li>
+                    <li>E : Element</li>
+                    <li>M : Modifier</li>
+                </ul>
+                <pre><code class="language-markup">&lt;b&gt;&lt;em class="menu"&gt;
+&lt;b&gt;&lt;em class="menu menu--active"&gt;
+&lt;b&gt;&lt;em class="menu__tab"&gt;
+&lt;b&gt;&lt;em class="menu__tab menu__tab--current"&gt;</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="slide slide--text">
+            <h2>
+                BEM améliore votre HTML
+            </h2>
+            <div class="slide-content">
+                <p>&Agrave; la recherche de classes autonomes et explicites.</p>
                 <pre><code class="language-markup">&lt;section class="content-article"&gt;
     &lt;h3 class="content-article__title"&gt;My title&lt;/h3&gt;
     &lt;p&gt;some content&lt;/p&gt;
@@ -104,23 +144,6 @@
         &lt;button class="button button--important"&gt;some button&lt;/button&gt;
     &lt;/div&gt;
 &lt;/section&gt;</code></pre>
-            </div>
-        </div>
-    </section>
-
-
-    <section>
-        <div class="content content--text">
-            <div class="content-inner">
-                <h2>
-                    BEM améliore votre HTML
-                </h2>
-                <ul>
-                    <li class="current">BEM &amp; HTML</li>
-                    <li>BEM &amp; CSS</li>
-                    <li>Mise en place</li>
-                    <li>Astuces</li>
-                </ul>
             </div>
         </div>
     </section>
