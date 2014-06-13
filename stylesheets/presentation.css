@@ -50,6 +50,10 @@ section {
     text-shadow: 1px 1px white;
 }
 
+.slide--bold {
+    font-weight: bold;
+}
+
 .slide--text {
     text-align: left;
 }
@@ -81,6 +85,12 @@ section {
 }
 .current {
     color: #663399;
+}
+.spotGreen {
+    color: yellowgreen;
+}
+.spotRed {
+    color: tomato;
 }
 .bespoke-slide blockquote {
     font-family: Baskerville;

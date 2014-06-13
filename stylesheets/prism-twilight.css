@@ -82,7 +82,6 @@ code[class*="language-"]::selection, code[class*="language-"] ::selection {
 
 .token.keyword,
 .token.property,
-.token.selector,
 .token.constant,
 .token.symbol,
 .token.builtin {
@@ -92,12 +91,13 @@ code[class*="language-"]::selection, code[class*="language-"] ::selection {
 .token.attr-value,
 .token.string,
 .token.operator,
+.token.selector,
 .token.entity,
 .token.url,
 .language-css .token.string,
 .style .token.string,
 .token.variable {
-	color:#663399; /* #8F9D6A */
+	color: #663399; /* #8F9D6A */
 }
 
 .token.atrule {
