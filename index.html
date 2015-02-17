@@ -10,6 +10,7 @@
     <link href="stylesheets/presentation.css" rel="stylesheet" type="text/css">
     <link href="stylesheets/font-awesome.css" rel="stylesheet" type="text/css">
     <link href="stylesheets/prism-twilight.css" rel="stylesheet" type="text/css" >
+    <link href="stylesheets/print.css" rel="stylesheet" type="text/css" media="print">
 </head>
 <body>
 <article>
@@ -55,11 +56,11 @@
             </h2>
             <div class="slide-content">
                 <p>&Agrave; la recherche de <span class="current">classes autonomes</span>.</p>
-                <pre><code class="language-markup">&lt;section class="content-article"&gt;
+                <pre><code class="language-markup">&lt;section class="article"&gt;
     &lt;h3 class="title"&gt;My title&lt;/h3&gt;
     &lt;p&gt;some content&lt;/p&gt;
 
-    &lt;div class="action"&gt;
+    &lt;div class="action-zone"&gt;
         &lt;h4 class="title important"&gt;
             Action title
         &lt;/h4&gt;
@@ -77,12 +78,12 @@
             </h2>
             <div class="slide-content">
                 <p>&Agrave; la recherche de classes autonomes <span class="current">et explicites</span>.</p>
-                <pre><code class="language-markup">&lt;section class="content-article"&gt;
-    &lt;h3 class="content-article-title"&gt;My title&lt;/h3&gt;
+                <pre><code class="language-markup">&lt;section class="article"&gt;
+    &lt;h3 class="article-title"&gt;My title&lt;/h3&gt;
     &lt;p&gt;some content&lt;/p&gt;
 
-    &lt;div class="action"&gt;
-        &lt;h4 class="action-title title-important"&gt;
+    &lt;div class="action-zone"&gt;
+        &lt;h4 class="action-zone-title title-important"&gt;
             Action title
         &lt;/h4&gt;
         &lt;button class="button-important"&gt;some button&lt;/button&gt;
@@ -132,9 +133,9 @@
                     <li>M -> Modifier</li>
                 </ul>
                 <pre><code class="language-markup">&lt;b&gt;&lt;em class="menu"&gt;
-&lt;b&gt;&lt;em class="menu menu--active"&gt;
 &lt;b&gt;&lt;em class="menu__tab"&gt;
-&lt;b&gt;&lt;em class="menu__tab menu__tab--current"&gt;</code></pre>
+&lt;b&gt;&lt;em class="menu__tab menu__tab--current"&gt;
+&lt;b&gt;&lt;em class="menu menu--active"&gt;</code></pre>
             </div>
         </div>
     </section>
@@ -146,12 +147,12 @@
             </h2>
             <div class="slide-content">
                 <p>&Agrave; la recherche de classes autonomes et explicites.</p>
-                <pre><code class="language-markup">&lt;section class="content-article"&gt;
-    &lt;h3 class="content-article__title"&gt;My title&lt;/h3&gt;
+                <pre><code class="language-markup">&lt;section class="article"&gt;
+    &lt;h3 class="article__title"&gt;My title&lt;/h3&gt;
     &lt;p&gt;some content&lt;/p&gt;
 
-    &lt;div class="action"&gt;
-        &lt;h4 class="action__title action__title--important"&gt;
+    &lt;div class="action-zone"&gt;
+        &lt;h4 class="action-zone__title action-zone__title--important"&gt;
             Action title
         &lt;/h4&gt;
         &lt;button class="button button--important"&gt;some button&lt;/button&gt;
@@ -228,12 +229,12 @@
             </h2>
             <div class="slide-content">
                 <p>A. Pour éviter les fuites</p>
-                <pre><code class="language-markup">&lt;section class="content-article"&gt;
+                <pre><code class="language-markup">&lt;section class="article"&gt;
     &lt;h3 class="title"&gt;My title&lt;/h3&gt;
 
-    &lt;div class="action"&gt;
+    &lt;div class="action-zone"&gt;
         &lt;h4 class="title"&gt;</code></pre>
-                <pre><code class="language-css">.content-article .title {
+                <pre><code class="language-css">.article .title {
     margin-top: 20px;
 }</code></pre>
             </div>
@@ -247,15 +248,15 @@
             </h2>
             <div class="slide-content">
                 <p>B. Pour être séparé du markup (évolution)</p>
-                <pre><code class="language-markup">&lt;section class="content-article"&gt;
-    &lt;h3 class="content-article__title"&gt;My title&lt;/h3&gt;
+                <pre><code class="language-markup">&lt;section class="article"&gt;
+    &lt;h3 class="article__title"&gt;My title&lt;/h3&gt;
 &lt;/div&gt;</code></pre>
-                <pre><code class="language-css">.content-article__title:first-child {
+                <pre><code class="language-css">.article__title:first-child {
     margin-top: 0;
 }</code></pre>
-                <pre><code class="language-markup">&lt;section class="content-article"&gt;
+                <pre><code class="language-markup">&lt;section class="article"&gt;
     &lt;img style="float:left;" /&gt;
-    &lt;h3 class="content-article__title"&gt;My title&lt;/h3&gt;
+    &lt;h3 class="article__title"&gt;My title&lt;/h3&gt;
 &lt;/div&gt;</code></pre>
             </div>
         </div>
@@ -285,10 +286,10 @@
             </h2>
             <div class="slide-content">
                 <p>D. Pour être séparé du markup (SEO)</p>
-                <pre><code class="language-markup">&lt;h1 class="content-article__title"&gt;
-&lt;h2 class="content-article__title"&gt;
-&lt;div class="content-article__title"&gt;</code></pre>
-                <pre><code class="language-css">.content-article__title {
+                <pre><code class="language-markup">&lt;h1 class="article__title"&gt;
+&lt;h2 class="article__title"&gt;
+&lt;div class="article__title"&gt;</code></pre>
+                <pre><code class="language-css">.article__title {
     font-size: 2em;
 }</code></pre>
             </div>
@@ -339,11 +340,11 @@ a { background: transparent }
             </h2>
             <div class="slide-content">
                 <p>A. <span class="current">S'habituer aux classes précises</span>.</p>
-                <pre><code class="language-markup">&lt;section class="content-article"&gt;
+                <pre><code class="language-markup">&lt;section class="article"&gt;
     &lt;h3 class="title"&gt;My title&lt;/h3&gt;
     &lt;p&gt;some content&lt;/p&gt;
 
-    &lt;div class="action"&gt;
+    &lt;div class="action-zone"&gt;
         &lt;h4 class="title important"&gt;
             Action title
         &lt;/h4&gt;
@@ -361,12 +362,12 @@ a { background: transparent }
             </h2>
             <div class="slide-content">
                 <p>A. S'habituer aux classes précises. <span class="current">Ce n'est pas sale</span> ;)</p>
-                <pre><code class="language-markup">&lt;section class="content-article"&gt;
-    &lt;h3 class="content-article__title"&gt;My title&lt;/h3&gt;
+                <pre><code class="language-markup">&lt;section class="article"&gt;
+    &lt;h3 class="article__title"&gt;My title&lt;/h3&gt;
     &lt;p&gt;some content&lt;/p&gt;
 
-    &lt;div class="action"&gt;
-        &lt;h4 class="action__title action__title--important"&gt;
+    &lt;div class="action-zone"&gt;
+        &lt;h4 class="action-zone__title action-zone__title--important"&gt;
             Action title
         &lt;/h4&gt;
         &lt;button class="button button--important"&gt;some button&lt;/button&gt;
