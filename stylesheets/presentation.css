@@ -2,11 +2,12 @@
 /* Slides
  ====================================================*/
 body {
-    background: #211E1E;
-    font-family: "Source Sans Pro";
-    color: #DEDEDE;
+    font-family: "Lora", serif;
     margin: 0;
     padding: 0;
+    font-size: 26px;
+    line-height: 1.5;
+    color: #494f56;
 }
 
 section {
@@ -14,7 +15,6 @@ section {
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-    font-size: 3em;
     width: 100%;
     display: none;
 }
@@ -27,104 +27,114 @@ section {
     height: 100%;
 }
 
-.slide {
+.content {
     display: table-cell;
-    padding: 1em;
+    padding: 20px 40px;
     vertical-align: top;
-    text-align: center;
 }
 
-.slide--card {
+.content--card {
     vertical-align: middle;
+    text-align: center;
+    background: #444;
+    
+    color: white;
+    font-size: 1.5em;
+    text-shadow: 1px 1px 0 #0D0D19;
 }
 
-.slide--textShadow {
-    text-shadow: 1px 1px #0D0D0D;
+.content--card h1,
+.content--card h2,
+.content--card h3 {
+    background: none
 }
 
-.slide--dark {
-    color: #0D0D0D;
+.content--card h1,
+.content--card h2 {
+    color: white;
 }
 
-.slide--dark.slide--textShadow {
-    text-shadow: 1px 1px white;
-}
-
-.slide--bold {
-    font-weight: bold;
-}
-
-.slide--text {
-    text-align: left;
-}
-
-.slide-content {
-    font-size: 0.7em;
-    text-align: left;
-}
-
-.slide-content--center {
-    display: inline-block;
-}
-
-
-/* Content styling
- ====================================================*/
-.bespoke-slide h1 {
-    font-size: 100px;
-    margin: 0;
-}
-.bespoke-slide h1 small {
-    font-size: 40px;
+.content--card > small {
     display: block;
 }
-.bespoke-slide h2 {
-    font-size: 60px;
+
+.content__card {
+    display: inline-block;
     margin: 0;
-    border-bottom: 1px white solid;
+    padding: 0;
+    text-align: left;
+    white-space: nowrap;
 }
-.current {
-    color: #663399;
+
+
+/* Content typo styling
+ ====================================================*/
+h1,
+h2,
+h3 {
+    padding: 20px 40px; 
+    margin: -20px -40px;
+    margin-bottom: 20px;
+    background: #444;
+    
+    color: white;
+    text-shadow: 1px 1px 0 #0D0D19;
+    font-family: "Istok Web", sans-serif;
+    line-height: 1.2;
 }
-.spotGreen {
-    color: yellowgreen;
+h1 {
+    font-size: 1.8em;
 }
-.spotRed {
-    color: tomato;
+h2 {
+    font-size: 1.6em;
 }
-.bespoke-slide blockquote {
+h3 {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+b {
+    color: #905;
+}
+
+ol,
+ul {
+    font-size: inherit;
+    display: block;
+}
+ul {
+    list-style: disc inside;
+}
+li {
+    margin-bottom: 0.3em
+}
+
+a {
+    font-weight: 700;
+    color: #4584a5;
+    text-decoration: none;
+}
+a:hover,
+a:focus,
+a:active {
+    text-decoration: underline;
+}
+
+blockquote {
     font-family: Baskerville;
     font-style: italic;
     margin: 0;
 }
-.bespoke-slide blockquote small {
+blockquote small {
     margin-top: 1em;
     display: block;
     text-align: right;
 }
-.bespoke-slide ul {
-    font-size: 0.8em;
-    text-align: left;
-    display: inline-block;
-    margin: 0 auto;
-    list-style-type: none;
-}
-.slide--text ul {
-    font-size: 1em;
-    list-style: disc inside;
-}
-.slide--text p + ul {
-    margin-top: 0;
-}
-.slide--text img {
-    border: 1px black solid;
+
+.current {
+    color: deepskyblue;
 }
 
-section a {
-    font-weight: 700;
-    color: #007896;
-    text-decoration: none;
-}
 
 
 /* Utils for content
@@ -152,10 +162,32 @@ section .classyNote {
     padding: 1em;
 }
 
+.spotGreen {
+    color: yellowgreen;
+    list-style-type: none;
+}
+
+.spotRed {
+    color: tomato;
+    list-style-type: none;
+}
+
+.center {
+    text-align: center;
+}
+
 .left {
     float: left;
 }
 
 .right {
     float: right;
+}
+
+
+/* Code
+ ====================================================*/
+pre[class*="language-"] {
+    font-size: 80%;
+    line-height: 1.5;
 }
