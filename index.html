@@ -95,7 +95,7 @@
                 <pre><code class="language-markup">
                     <section class="article">
                         <h1 class="article-title article-title-main">How to start with BEM?</h1>
-                        <small class="author">Thomas.</small>
+                        <small class="article-author">Thomas.</small>
 
                         <div class="wp-comment">
                             <h2 class="wp-comment-title">Thanks for sharing!</h2>
@@ -120,9 +120,9 @@
     <section>
         <div class="content content--card">
             <ul class="content__card">
-                <li>B &rarr; Block</li>
+                <li class="spot">B &rarr; Block</li>
                 <li class="spotGreen">E &rarr; Element</li>
-                <li class="spotRed">F &rarr; Modifier</li>
+                <li class="spotRed">M &rarr; Modifier</li>
             </ul>
         </div>
     </section>
@@ -143,19 +143,19 @@
             <div class="slide-content">
                 <img src="images/image__illustration--BEM-definition.png" class="right" />
                 <ul>
-                    <li>B &rarr; Block <i>(component ou module)</i>
+                    <li class="spot">B &rarr; Block <i>(component ou module)</i>
                         <pre><code class="language-markup">
                             <ul class="menu"></ul>
                         </code></pre>
                     </li>
-                    <li>E &rarr; Element
+                    <li class="spot">E &rarr; Element
                         <pre><code class="language-markup">
                             <ul class="menu">
                                 <li class="menu__link"></li>
                             </ul>
                         </code></pre>
                     </li>
-                    <li>M &rarr; Modifier
+                    <li class="spot">M &rarr; Modifier
                         <pre><code class="language-markup">
                             <ul class="menu menu--tab">
                                 <li class="menu__link menu__link--active"></li>
@@ -177,7 +177,7 @@
                 <pre><code class="language-markup">
                     <section class="article">
                         <h1 class="article__title / article__title--main">How to start with BEM?</h1>
-                        <small class="author">Thomas.</small>
+                        <small class="article__author">Thomas.</small>
 
                         <div class="article__comment / wp-comment">
                             <h2 class="wp-comment__title">Thanks for sharing!</h2>
@@ -617,7 +617,7 @@
                 <pre><code class="language-markup">
                     <section class="article">
                         <h1 class="article__title / article__title--main">How to start with BEM?</h1>
-                        <small class="author">Thomas.</small>
+                        <small class="article__author">Thomas.</small>
 
                         <div class="article__comment / wp-comment">
                             <h2 class="wp-comment__title">Thanks for sharing!</h2>
@@ -769,7 +769,7 @@
                     <nav class="menu">
                         <ul class="menu__list">
                             <li class="menu__item tab">
-                                <a class="tab__link"></a>
+                                <a class="tab__link">
                                     <span class="tab__label"></span>
                                 </a>
                             </li>

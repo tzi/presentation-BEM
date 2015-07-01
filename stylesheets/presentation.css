@@ -162,6 +162,10 @@ section .classyNote {
     padding: 1em;
 }
 
+.spot {
+    list-style-type: none;
+}
+
 .spotGreen {
     color: yellowgreen;
     list-style-type: none;
