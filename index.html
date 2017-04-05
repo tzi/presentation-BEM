@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Présentation BEM</title>
+    <meta name="viewport" content="initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Itim|Source+Code+Pro" rel="stylesheet">
+    <link href="stylesheets/presentation.css" rel="stylesheet">
+    <link href="stylesheets/prism.css" rel="stylesheet">
+    <link href="stylesheets/print.css" rel="stylesheet" media="print">
+</head>
+<body>
+<article>
+
+
+    <section>
+        <div class="slide slide--card">
+            <h1>
+                <span class="small classy">Sur la route des</span>
+                CSS maintenables
+            </h1>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide slide--card">
+            <h2>
+                Introduction
+            </h2>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide">
+            <div class="slide__title">CSS Maintenables</div>
+            <div class="slide__content">
+                <ol class="bullets">
+                    <li>CSS est simple à apprendre</li>
+                    <li>CSS est difficile à maîtriser</li>
+                    <li>CSS est difficile à maintenir</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide">
+            <div class="slide__title">CSS Maintenables</div>
+            <div class="slide__content">
+                <blockquote>
+                    It’s almost a challenge to ﬁnd a development team that’s working on a codebase that’s more than a couple of years old
+                    where the CSS isn’t the most frightening and hated part of that system.
+                    <footer>
+                        <cite>
+                            &mdash;
+                            Andy Hume,
+                            <a href="https://www.youtube.com/watch?v=ZpFdyfs03Ug">
+                                CSS for Grownups
+                            </a>
+                        </cite>
+                    </footer>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide">
+            <div class="slide__title">CSS Maintenables</div>
+            <div class="slide__content">
+                <img src="images/css-puns-titanic.jpg" class="slide__background"/>
+                <p>Les symptômes possibles</p>
+                <ul class="bullets">
+                    <li>Le temps de développement</li>
+                    <li>La taille des feuilles de style</li>
+                    <li>Le travail à plusieurs</li>
+                    <li>L'arrivée de nouveau collaborateurs</li>
+                    <li>Les travaux réservés aux expert</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide slide--card">
+            <h3>BEM, la solution !</h3>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide">
+            <div class="slide__title">BEM, la solution !</div>
+            <div class="slide__content">
+                <img src="images/bem.png" class="slide__background"/>
+                <p>BEM</p>
+                <ul class="bullets">
+                    <li>Rend vos CSS maintenables</li>
+                    <li>Soigne du cancer</li>
+                    <li class="bullet-group">Ramène l'être aimé</li>
+                    <li class="bullet-group">…</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide">
+            <div class="slide__title">BEM, la solution !</div>
+            <div class="slide__content">
+                <img src="images/just-introduced-bem.jpg" alt="BEM is magic!"/>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide">
+            <div class="slide__title">BEM, la solution !</div>
+            <div class="slide__content">
+                <p>Le champs d'action des méthodologies CSS</p>
+                <pre><code class="language-css css">.maintainable-selector { … }</code></pre>
+                <pre><code class="language-css css">.bem-selector { … }</code></pre>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide slide--card">
+            <h2>Top Down CSS</h2>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide">
+            <div class="slide__title">Top Down CSS</div>
+            <div class="slide__content">
+                <pre class="bullet"><code class="language-css css">.news .title { … }</code></pre>
+                <pre class="bullet"><code class="language-css css">#sidebar .news .title { … }</code></pre>
+                <pre class="bullet"><code class="language-css css">.widget .news .title,
+#sidebar .widget .news .title { … }</code></pre>
+                <div class="highlight-box bullet">
+                    Qui n'est pas à l'aise avec la spécificité des sélecteurs ?
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide">
+            <div class="slide__title">Top Down CSS</div>
+            <div class="slide__content">
+                <a href="http://www.slideshare.net/jewlofthelotus/decoupling-the-frontend-through-modular-css#12">
+                    <img src="images/top-down-css.jpg" alt="Top Down CSS" />
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide">
+            <div class="slide__title">Top Down CSS</div>
+            <div class="slide__content">
+                <p>Il devient rapidemment impossible de connaître toutes les règles déjà écrites</p>
+                <ul class="bullets">
+                    <li>On rajoute à la fin du fichier</li>
+                    <li>On rallonge le fichier</li>
+                    <li>On duplique</li>
+                    <li>On introduit des incohérences</li>
+                    <li>Les nouvelles ressources pleurent</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide">
+            <div class="slide__title">Top Down CSS</div>
+            <div class="slide__content">
+                <p>On veut des styles</p>
+                <ol class="bullets">
+                    <li><strong>Modulaires</strong> <em>vs un seul fichier</em><br>
+                        on peut se concentrer sur un problème
+                    </li>
+                    <li><strong>Prévisibles</strong> <em>vs sémantiques</em><br>
+                        on peut comprendre le CSS depuis l'HTML
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide slide--card">
+            <h2>Intégration modulaire</h2>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide">
+            <div class="slide__title">Intégration modulaire</div>
+            <div class="slide__content">
+                <p class="bullet">L'objectif est de se créer une collection de composants réutilisables.</p>
+                <div class="bullet highlight-box">
+                    Créer de nouvelles pages ne devrait pas forcément nécessiter d'écrire du CSS !
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide">
+            <div class="slide__title">Intégration modulaire</div>
+            <div class="slide__content">
+                <p>Constat : L'HTML change constamment</p>
+                <img class="bullet" src="images/css-over-html.svg" alt="Scénario où le CSS dépend de l'HTML" />
+                <div class="bullet highlight-box">
+                    L'idéal où l'on pourrait modifier seulement le CSS à chaque modification de design n'existe (presque) pas !
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide">
+            <div class="slide__title">Intégration modulaire</div>
+            <div class="slide__content">
+                <p>On peut concevoir des feuilles CSS indépendantes de la structure HTML</p>
+                <img class="bullet" src="images/css-as-api.svg" alt="Scénario où le CSS est une couche utilisé par l'HTML" />
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide">
+            <div class="slide__title">Intégration modulaire</div>
+            <div class="slide__content">
+                <img src="images/robinet.jpg" alt="Robinet mélangeur">
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide slide--card">
+            <h3>Retour d'XP</h3>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide">
+            <div class="slide__title">Retour d'XP</div>
+            <div class="slide__content">
+                <blockquote>
+                    Due to these efforts, we cut our average CSS bytes per page by 19% (after gzip)
+                    and HTML bytes per page by 44% (before gzip)
+                    <footer>
+                        <cite>&mdash;
+                            <a href="https://fr-fr.facebook.com/notes/facebook-engineering/making-facebook-2x-faster/307069903919/">
+                                Making Facebook 2x Faster
+                            </a>
+                        </cite>
+                    </footer>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide">
+            <div class="slide__title">Retour d'XP</div>
+            <div class="slide__content">
+                <blockquote>
+                    We started with 3348 lines of CSS and ended up with only 972,
+                    meaning we managed to delete more than 2/3 thanks to deleting unused selectors,
+                    merging similar styles, and employing CSS re-usability techniques like mixins, variables, and functions.
+                    <footer>
+                        <cite>&mdash;
+                            <a href="https://www.oxbridgenotes.com/articles/css_refactoring_from_append_only_to_modular_css">
+                                Oxbridge Notes
+                            </a>
+                        </cite>
+                    </footer>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide">
+            <div class="slide__title">Retour d'XP</div>
+            <div class="slide__content">
+                <blockquote>
+                    Factorisation de 3 sites de jeu en ligne, dans le but de créer une marque blanche.
+                    On est passé de +24 000 lignes de CSS à -4000 lignes. En 1 mois.
+                    <footer>
+                        <cite>&mdash;
+                            Experience personnelle à Mediastay
+                        </cite>
+                    </footer>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide slide--card">
+            <h3>Des sélecteurs au régime</h3>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide">
+            <div class="slide__title">Des sélecteurs au régime</div>
+            <div class="slide__content">
+                <p>Pas d'id</p>
+                <pre><code class="language-css css">/* Header object */
+#header { background-color: #464E51; }
+#header a { color: hotpink; }</code></pre>
+                <ul>
+                    <li>Limite la réutilisabilité</li>
+                    <li>Trop spécifique</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide">
+            <div class="slide__title">Des sélecteurs au régime</div>
+            <div class="slide__content">
+                <p>Pas de balise</p>
+                <pre><code class="language-css css">/* Button object */
+a.button { color: black; }</code></pre>
+                <br>
+                <pre><code class="language-markup html">&lt;button type="button" class="button">&lt;/button>
+&lt;a href="#" class="button">&lt;/a>
+&lt;input type="button" class="button" /></code></pre>
+                <ul>
+                    <li>Limite la réutilisabilité</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide">
+            <div class="slide__title">Des sélecteurs au régime</div>
+            <div class="slide__content">
+                <p>Pas de balise</p>
+                <pre><code class="language-css css">/* Header object */
+.header a { color: white; }
+/* Button object */
+.button { color: black; }</code></pre>
+                <ul>
+                    <li>&Eacute;vite les fuites de styles</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide">
+            <div class="slide__title">Des sélecteurs au régime</div>
+            <div class="slide__content">
+                <p>Eviter l'imbrication</p>
+                <pre><code class="language-css css">/* Article object */
+.article .title { font-weight: bold; }
+/* Comment object */
+.comment .title { color: hotpink }</code></pre>
+                <br>
+                <pre><code class="language-markup html">&lt;div class="article">
+    &lt;div class="comment">
+        &lt;div class="title">&lt;/div>
+    &lt;/div>
+&lt;/div></code></pre>
+                <ul>
+                    <li>&Eacute;vite les fuites de styles</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide">
+            <div class="slide__title">Des sélecteurs au régime</div>
+            <div class="slide__content">
+                <p>Eviter l'imbrication</p>
+                <br>
+                <pre><code class="language-markup html">&lt;div class="article">
+    &lt;div class="title">&lt;/div>
+    &lt;div class="comment">
+        &lt;div class="title">&lt;/div>
+    &lt;/div>
+&lt;/div></code></pre>
+                <ul>
+                    <li>Prévisibilité</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide">
+            <div class="slide__title">Des sélecteurs au régime</div>
+            <div class="slide__content">
+                <p>Eviter l'imbrication, ou utiliser l'opérateur <code>></code></p>
+                <pre><code class="language-css css">/* Article object */
+.article > .title { font-weight: bold; }
+/* Comment object */
+.comment > .title { color: hotpink }</code></pre>
+                <ul>
+                    <li>&Eacute;vite les fuites de styles</li>
+                    <li>Mais non prévisible !</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide">
+            <div class="slide__title">Des sélecteurs au régime</div>
+            <div class="slide__content">
+                <p>Pas de <code>+</code>, <code>~</code>, <code>:nth-child()</code>, etc.</p>
+                <pre><code class="language-markup html">&lt;ul>
+    &lt;li class="box">&lt;/li>
+    &lt;li class="box">&lt;/li>
+    &lt;li class="box">&lt;/li>
+&lt;/ul></code></pre>
+                <ul>
+                    <li>Prévisibilité</li>
+                    <li>Complexité</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide">
+            <div class="slide__title">Des sélecteurs au régime</div>
+            <div class="slide__content">
+                <p>En conclusion</p>
+                <ul class="bullets">
+                    <li>Le sélecteur idéal est une seule classe</li>
+                    <li>Le CSS ne contient aucune logique</li>
+                    <li>Le style qui s'applique est prévisible</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide slide--card">
+            <h3>
+                La classe<br>
+                <span class="small classy">ne fait pas le module</span>
+            </h3>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide">
+            <div class="slide__title">La classe ne fait pas le module</div>
+            <div class="slide__content">
+                <p>
+                    <code>.account-button</code>
+                </p>
+                <img src="images/6play/account-button-2.png">
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide">
+            <div class="slide__title">La classe ne fait pas le module</div>
+            <div class="slide__content">
+                <p>
+                    <code>.account-content-button</code>
+                </p>
+                <img src="images/6play/account-button-3.png">
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide">
+            <div class="slide__title">La classe ne fait pas le module</div>
+            <div class="slide__content">
+                <p>
+                    <code>.auth-content-form__input</code>
+                </p>
+                <img src="images/6play/account-button-1.png">
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide">
+            <div class="slide__title">La classe ne fait pas le module</div>
+            <div class="slide__content">
+                <p>Nommer le visuel ou la fonction visuelle</p>
+                <ul>
+                    <li><code>.highlight-box</code> vs <code>.bundle-product-discount-box</code></li>
+                    <li><code>.primary-button</code> vs <code>.submit-contact-form-button</code></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide slide--card">
+            <h2>
+                BEM
+            </h2>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide">
+            <div class="slide__title">BEM</div>
+            <div class="slide__content">
+                <p>La notation BEM permet une rapide indentification du rôle d'une classe</p>
+                <div class="highlight-box">
+                    BEM pour Block, Element et Modifier
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide">
+            <div class="slide__title">BEM</div>
+            <div class="slide__content">
+                <p>Ils utilisent BEM sur leur site principal</p>
+                <img src="images/they-use-bem.png" alt="Some big comapnies" />
+                <a href="https://github.com/tzi/BEM-references.md" target="_blank">
+                    Et Google, Twitter, BBC, theguardian, Financial Time, etc.
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide slide--card">
+            <h3>Block</h3>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide">
+            <div class="slide__title">Block</div>
+            <div class="slide__content">
+                <p>Un block est</p>
+                <ul class="bullets">
+                    <li>Un composant visuel ou fonctionnel</li>
+                    <li>Indépendant de la page et des autres blocks</li>
+                    <li>La racine d'une feuille style</li>
+                    <li>La racine d'une logique fonctionnelle</li>
+                </ul>
+                <div class="highlight-box bullet">
+                    C'est l'équivalent d'un composant des Web Components.
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide">
+            <div class="slide__title">Block</div>
+            <div class="slide__content">
+                <img src="images/bem-block1.png" alt="Exemple de design" />
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide">
+            <div class="slide__title">Block</div>
+            <div class="slide__content">
+                <img src="images/bem-block2.png" alt="Identification des blocks" />
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide">
+            <div class="slide__title">Block</div>
+            <div class="slide__content">
+                <p>Ils sont indépendants</p>
+                <img src="images/bem-block4a.png" alt="" />
+                <img src="images/bem-block4b.png" alt="" />
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide">
+            <div class="slide__title">Block</div>
+            <div class="slide__content">
+                <p>Ils peuvent être réutilisés</p>
+                <img src="images/bem-block5.png" alt="" />
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide">
+            <div class="slide__title">Block</div>
+            <div class="slide__content">
+                <p>Il peuvent être imbriqués</p>
+                <img src="images/bem-block3.png" alt="" />
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide">
+            <div class="slide__title">Block</div>
+            <div class="slide__content">
+                <p>On le cible à l'aide d'une seule classe</p>
+                <pre class="bullet"><code class="language-css css">.block-name { … }</code></pre>
+                <pre class="bullet"><code class="language-css css">.c-block-name { … }</code></pre>
+                <pre class="bullet"><code class="language-css css">.tzi-block-name { … }</code></pre>
+                <pre class="bullet"><code class="language-css css">.tzi-c-block-name { … }</code></pre>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide">
+            <div class="slide__title">Block</div>
+            <div class="slide__content">
+                <p>Par exemple</p>
+                <pre><code class="language-css css">.c-header { … }
+.c-logo { … }
+.c-search-form { … }
+.c-auth-form { … }
+.c-top-menu { … }</code></pre>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide">
+            <div class="slide__title">Block</div>
+            <div class="slide__content">
+                <p class="bullet">Chaque block a son propre fichier</p>
+                <div class="highlight-box bullet">
+                    Un fichier contient toutes les classes de son block
+                </div>
+                <div class="highlight-box bullet">
+                    Un fichier ne contient que des classes de son block
+                </div>
+                <div class="highlight-box bullet">
+                    Non négociable ! <br>
+                    <span class="bullet">Les sélecteurs sont la clé de la maintenabilité</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide slide--card">
+            <h3>Element</h3>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide">
+            <div class="slide__title">Element</div>
+            <div class="slide__content">
+                <p>Un élément est une entité BEM représentant une portion d'un seul et même block.</p>
+                <p>Il ne peut pas être utilisé en dehors du contexte de son block référant.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide">
+            <div class="slide__title">Element</div>
+            <div class="slide__content">
+                <img src="images/bem-element1.png" alt="Exemple du concept d'élément">
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide">
+            <div class="slide__title">Element</div>
+            <div class="slide__content">
+                <img src="images/bem-element2.png" alt="Exemple du concept d'élément variants">
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide">
+            <div class="slide__title">Element</div>
+            <div class="slide__content">
+                <p>On le cible à l'aide d'une seule classe</p>
+                <pre class="bullet"><code class="language-css css">.block-name__element-name { … }</code></pre>
+                <pre class="bullet"><code class="language-css css">.c-block-name__element-name { … }</code></pre>
+                <pre class="bullet-group"><code class="language-css css">.tzi-block-name__element-name { … }</code></pre>
+                <pre class="bullet-group"><code class="language-css css">.tzi-c-block-name__element-name { … }</code></pre>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide">
+            <div class="slide__title">Element</div>
+            <div class="slide__content">
+                <p>Par exemple</p>
+                <pre><code class="language-css css">.c-search-form { … }
+.c-search-form__input { … }
+.c-search-form__button { … }
+.c-search-form__suggestion-dropdown { … }</code></pre>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide slide--card">
+            <h3>Modifier</h3>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide">
+            <div class="slide__title">Modifier</div>
+            <div class="slide__content">
+                <p>Un modifier est une entité BEM représentant l'altération de l'apparence d'un bloc ou d'un élément.</p>
+                <p>Il s'agit du même concept que les classes d'extension en OOCSS.</p>
+                <p>L'utilisation des modifiers en BEM est facultative.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide">
+            <div class="slide__title">Modifier</div>
+            <div class="slide__content">
+                <img src="images/bem-modifier.png" alt="Exemple du concept de modifier">
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide">
+            <div class="slide__title">Element</div>
+            <div class="slide__content">
+                <p>On le cible à l'aide d'une seule classe</p>
+                <pre class="bullet"><code class="language-css css">.block-name--modifier-name { … }</code></pre>
+                <pre class="bullet"><code class="language-css css">.block-name__element-name--modifier-name { … }</code></pre>
+                <pre class="bullet"><code class="language-css css">.c-block-name--modifier-name { … }</code></pre>
+                <pre class="bullet-group"><code class="language-css css">.tzi-block-name--modifier-name { … }</code></pre>
+                <pre class="bullet-group"><code class="language-css css">.tzi-c-block-name--modifier-name { … }</code></pre>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide">
+            <div class="slide__title">Element</div>
+            <div class="slide__content">
+                <p>Par exemple</p>
+                <pre><code class="language-css css">.c-top-menu { … }
+.c-top-menu--align-left { … }
+.c-top-menu__tab { … }
+.c-top-menu__tab--active { … }</code></pre>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide slide--card">
+            <h3>Donner du sens aux classes</h3>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide">
+            <div class="slide__title">Donner du sens aux classes</div>
+            <div class="slide__content">
+                <p>Les noms de classe peuvent être ambigus</p>
+                <pre><code class="language-markup html">&lt;form class=&quot;search full&quot;&gt;
+    &lt;input class=&quot;input dropdown&quot; name=&quot;query&quot; type=&quot;search&quot;&gt;
+    &lt;button class=&quot;button&quot; type=&quot;submit&quot;&gt;
+        Search
+    &lt;/button&gt;
+&lt;/form&gt;</code></pre>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide">
+            <div class="slide__title">Donner du sens aux classes</div>
+            <div class="slide__content">
+                <p>En BEM, on enlève les doutes possibles</p>
+                <pre><code class="language-markup html">&lt;form class=&quot;c-search-form c-search-form--full&quot;&gt;
+    &lt;input class=&quot;c-search-form__input js-dropdown&quot; name=&quot;query&quot; type=&quot;search&quot;&gt;
+    &lt;button class=&quot;c-button&quot; type=&quot;submit&quot;&gt;
+        Search
+    &lt;/button&gt;
+&lt;/form&gt;</code></pre>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide">
+            <div class="slide__title">Donner du sens aux classes</div>
+            <div class="slide__content">
+                <p>On peut même expliciter les imbrications</p>
+                <pre><code class="language-markup html">&lt;form class=&quot;c-search-form c-search-form--full&quot;&gt;
+    &lt;input class=&quot;c-search-form__input js-dropdown&quot; name=&quot;query&quot; type=&quot;search&quot; &gt;
+    &lt;div class=&quot;c-search-form__action&quot;&gt;
+        &lt;button class=&quot;c-button&quot; type=&quot;submit&quot;&gt;
+            Search
+        &lt;/button&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide">
+            <div class="slide__title">Donner du sens aux classes</div>
+            <div class="slide__content">
+                <p>Parfois les imbrications peuvent être discrètes</p>
+                <pre><code class="language-markup html">&lt;form class=&quot;c-search-form c-search-form--full&quot;&gt;
+    &lt;input class=&quot;c-search-form__input js-dropdown&quot; name=&quot;query&quot; type=&quot;search&quot; &gt;
+    &lt;button class=&quot;c-search-form__action c-button&quot; type=&quot;submit&quot;&gt;
+        Search
+    &lt;/button&gt;
+&lt;/form&gt;</code></pre>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide">
+            <div class="slide__title">Donner du sens aux classes</div>
+            <div class="slide__content">
+                <p>Reprennons le module media de OOCSS</p>
+                <pre><code class="language-markup html">&lt;div class=&quot;media&quot;&gt;
+    &lt;img class=&quot;img-rev&quot; src=&quot;logo.png&quot; alt=&quot;Foo Corp logo&quot;&gt;
+    &lt;div class=&quot;body&quot;&gt;
+        &lt;h3 class=&quot;title&quot;&gt;Welcome to Foo Corp&lt;/h3&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide">
+            <div class="slide__title">Donner du sens aux classes</div>
+            <div class="slide__content">
+                <p>Là encore, les classes BEM sont explicites</p>
+                <pre><code class="language-markup html">&lt;div class=&quot;media&quot;&gt;
+    &lt;img class=&quot;media__img media__img--rev&quot; src=&quot;logo.png&quot; alt=&quot;Foo Corp logo&quot;&gt;
+    &lt;div class=&quot;media__body&quot;&gt;
+        &lt;h3 class=&quot;title&quot;&gt;Welcome to Foo Corp&lt;/h3&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide slide--card">
+            <h3>Conseils</h3>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide">
+            <div class="slide__title">Conseils</div>
+            <div class="slide__content">
+                <blockquote>
+                    One of the hardest parts of BEM is deciding when to start and stop scope, and when (or not) to use it
+                    <footer>
+                        <cite>
+                            &mdash;
+                            Harry Roberts,
+                            <a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">
+                                MindBEMding
+                            </a>
+                        </cite>
+                    </footer>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide">
+            <div class="slide__title">Conseils</div>
+            <div class="slide__content">
+                <blockquote>
+                    Don’t Layout Yourself:
+                    A component should style itself, but give up the task of layouting to its parent.
+                    <footer>
+                        <cite>
+                            &mdash;
+                            Thai Pangsakulyanont,
+                            <a href="http://blog.oozou.com/maintainable-css/">
+                                a More Maintainable CSS
+                            </a>
+                        </cite>
+                    </footer>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide">
+            <div class="slide__title">Conseils</div>
+            <div class="slide__content">
+                <p>N'hésitez pas à</p>
+                <ul class="bullets">
+                    <li>Découper</li>
+                    <li>Imbriquer</li>
+                    <li>Dupliquer <span class="bullet">(oui...)</span>
+                        <div class="bullet">Dry n'est pas le copain de BEM</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide">
+            <div class="slide__title">Conseils</div>
+            <div class="slide__content">
+                <p>N'abuser pas de Sass</p>
+                <ul class="bullets">
+                    <li>Pas de génération de sélecteur</li>
+                    <li>Pas de <code>@extend</code> massif</li>
+                    <li>Limiter aux mixins pratiques</li>
+                </ul>
+                <pre class="bullet"><code class="language-css css">@include clearfix();</code></pre>
+                <pre class="bullet"><code class="language-css css">@include text-ellipsis();</code></pre>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="slide">
+            <div class="slide__title">Conseils</div>
+            <div class="slide__content">
+                <p>Vous pouvez l'utiliser partout</p>
+                <img src="images/bem-for-files.png" alt="Pratique pour nommer les factures EDF : EDF__Facture--2016.pdf"/>
+            </div>
+        </div>
+    </section>
+
+</article>
+<script src="javascripts/bespoke.min.js"></script>
+<script src="javascripts/bespoke-classes.min.js"></script>
+<script src="javascripts/bespoke-keys.min.js"></script>
+<script src="javascripts/bespoke-touch.min.js"></script>
+<script src="javascripts/bespoke-hash.min.js"></script>
+<script src="javascripts/bespoke-bullets.min.js"></script>
+<script src="javascripts/bespoke-slidenumber.min.js"></script>
+<script src="javascripts/presentation.js"></script>
+<script src="javascripts/prism.js"></script>
+</body>
+</html>

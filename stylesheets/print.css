@@ -1,0 +1,24 @@
+
+/* Slides
+ ====================================================*/
+section,
+.bespoke-slide {
+    display: table;
+    position: relative;
+    page-break-after: always;
+    width: 100%;
+    height: 100vh;
+}
+
+.bespoke-bullet-inactive,
+.bespoke-bullet-inactive ~ .bullet-group {
+    visibility: visible;
+}
+
+video::-webkit-media-controls {
+    display: none;
+}
+
+@page {
+    margin: 0;
+}
